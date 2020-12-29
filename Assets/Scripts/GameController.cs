@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameController : MonoBehaviour {
 
 	public int swigs;
-	public GUIText swigText;
-	public GUIText scoreText;
+	public Text swigText;
+	public Text scoreText;
 	public int maxPatrons;
 	public float spawnWait;
 	public float startWait;
@@ -14,9 +15,9 @@ public class GameController : MonoBehaviour {
 
 	public int currentNumberOfDemons = 0;
 
-	public GUIText shankYouText;
-	public GUIText gameOverText;
-	public GUIText restartText;
+	public Text shankYouText;
+	public Text gameOverText;
+	public Text restartText;
 
 	private int score = 0;
 	public int patronCounter = 0;
