@@ -15,22 +15,22 @@ public class Motor : MonoBehaviour {
     }
 
     void Update() {
-        rigidbody.velocity = speed * dir;
+        GetComponent<Rigidbody>().velocity = speed * dir;
     }
 
     public void MoveDir(Vector3 _dir) {
         dir = _dir;
-        rigidbody.velocity = speed * dir.normalized;
+        GetComponent<Rigidbody>().velocity = speed * dir.normalized;
     }
 
     public void MoveTo(Vector3 dest) {
-        dir = (dest - rigidbody.position).normalized;
+        dir = (dest - GetComponent<Rigidbody>().position).normalized;
         MoveDir(dir);
     }
 
     public void Stop() {
         dir = new Vector3(0,0,0);
-        rigidbody.velocity = new Vector3(0,0,0);
+        GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
     }
 
     IEnumerator randomDir() {
@@ -38,9 +38,9 @@ public class Motor : MonoBehaviour {
 
         while (true)
         {
-            MoveTo(new Vector3(30 * (Random.value*2 -1) + rigidbody.position.x,
+            MoveTo(new Vector3(30 * (Random.value*2 -1) + GetComponent<Rigidbody>().position.x,
                                0,
-                               30 * (Random.value*2 -1) + rigidbody.position.z));
+                               30 * (Random.value*2 -1) + GetComponent<Rigidbody>().position.z));
             yield return new WaitForSeconds(1);
         }
     }

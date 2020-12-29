@@ -26,7 +26,7 @@ public class Demon : MonoBehaviour {
 		}
 		
 		if (other.tag == "VVAura") {
-			characterSprite.renderer.material.color = Color.red;
+			characterSprite.GetComponent<Renderer>().material.color = Color.red;
 		}
 	}
 }

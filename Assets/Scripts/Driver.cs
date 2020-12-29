@@ -7,7 +7,7 @@ public class Driver : MonoBehaviour {
 
     void Awake() {
         Vector3 pos = GameObject.Find("node3").transform.position;
-        NavMeshAgent nva = GetComponent<NavMeshAgent>();
+        UnityEngine.AI.NavMeshAgent nva = GetComponent<UnityEngine.AI.NavMeshAgent>();
         nva.SetDestination(pos);
         nva.updateRotation = false;
     }

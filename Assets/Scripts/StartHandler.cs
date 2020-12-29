@@ -7,11 +7,11 @@ public class StartHandler : MonoBehaviour {
 	public Sprite hoverButton;
 
 	void OnMouseEnter() {
-		guiTexture.texture = hoverButton.texture;
+		GetComponent<GUITexture>().texture = hoverButton.texture;
 	}
 
 	void OnMouseExit() {
-		guiTexture.texture = normalButton.texture;
+		GetComponent<GUITexture>().texture = normalButton.texture;
 	}
 
 	void OnMouseDown() {

@@ -6,7 +6,7 @@ public class WalkAI : MonoBehaviour {
 	private GameObject[] destinations;
 	public int currentDestIndex = 0;
 	
-	private NavMeshAgent nva;
+	private UnityEngine.AI.NavMeshAgent nva;
 	
 	void Awake() {
 
@@ -25,7 +25,7 @@ public class WalkAI : MonoBehaviour {
 			poi2
 		};
 
-		nva = GetComponent<NavMeshAgent>();
+		nva = GetComponent<UnityEngine.AI.NavMeshAgent>();
 		nva.updateRotation = false;
 		nva.SetDestination(destinations[currentDestIndex].transform.position);
 	}

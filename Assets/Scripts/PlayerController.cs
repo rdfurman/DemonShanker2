@@ -49,14 +49,14 @@ public class PlayerController : MonoBehaviour {
 		{
 			nextFire = Time.time + delay;
 			Instantiate(shank, shankSpawn.position, playerAngle.rotation);
-			shankSpawn.audio.Play ();
+			shankSpawn.GetComponent<AudioSource>().Play ();
             animator.Play("player_shank");
 		}
 
 		if (Input.GetButton("ActivateVV") && gameController.swigs > 0 && Time.time > nextFire)
 		{
 			nextFire = Time.time + delay * 2;
-			Instantiate (vvAura, rigidbody.position, rigidbody.rotation);
+			Instantiate (vvAura, GetComponent<Rigidbody>().position, GetComponent<Rigidbody>().rotation);
 			gameController.TakeSwig();
             animator.Play("player_swig");
 		}
@@ -117,9 +117,9 @@ public class PlayerController : MonoBehaviour {
 		}
 		
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-		rigidbody.velocity = movement * speed;
+		GetComponent<Rigidbody>().velocity = movement * speed;
 		
-		rigidbody.freezeRotation = true;
+		GetComponent<Rigidbody>().freezeRotation = true;
 	}
 
 	void FixedUpdate() {

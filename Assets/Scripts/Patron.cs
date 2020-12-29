@@ -29,11 +29,11 @@ public class Patron : MonoBehaviour {
 		if (other.tag == "Shank") 
 		{
 			if(isDemon) {
-				AudioSource.PlayClipAtPoint (demonDeath, gameObject.rigidbody.position);
+				AudioSource.PlayClipAtPoint (demonDeath, gameObject.GetComponent<Rigidbody>().position);
 				gameController.AddScore ();
 			}
 			else {
-				AudioSource.PlayClipAtPoint (patronDeath, gameObject.rigidbody.position);
+				AudioSource.PlayClipAtPoint (patronDeath, gameObject.GetComponent<Rigidbody>().position);
 				gameController.DetractScore ();
 			}
 
@@ -41,8 +41,8 @@ public class Patron : MonoBehaviour {
 		}
 
 		if (other.tag == "VVAura" && isDemon) {
-			characterSprite.renderer.material.color = Color.red;
-			demonHead.renderer.enabled = true;
+			characterSprite.GetComponent<Renderer>().material.color = Color.red;
+			demonHead.GetComponent<Renderer>().enabled = true;
 		}
 	}
 }
