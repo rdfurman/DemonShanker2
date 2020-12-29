@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class StartHandler : MonoBehaviour {
 	public void OnMouseDown() {
-		Application.LoadLevel ("Main");
+		SceneManager.LoadScene("Main");
 	}
 }

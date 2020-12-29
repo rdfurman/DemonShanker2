@@ -34,7 +34,7 @@ public class Motor : MonoBehaviour {
     }
 
     IEnumerator randomDir() {
-        Random.seed = (int)Time.time;
+        Random.InitState((int)Time.time);
 
         while (true)
         {

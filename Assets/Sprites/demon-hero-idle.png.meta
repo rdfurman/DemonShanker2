@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: bf0037c206d67144d8e55f3a177cfda6
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: demon-hero-idle_0
-    21300002: demon-hero-idle_1
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: demon-hero-idle_0
+  - first:
+      213: 21300002
+    second: demon-hero-idle_1
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -59,8 +63,9 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 1024
     resizeAlgorithm: 0
@@ -71,6 +76,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -90,6 +96,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: 892e3c9f5d628654a9831ffbf3734ae8
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -110,6 +117,7 @@ TextureImporter:
       tessellationDetail: -1
       bones: []
       spriteID: c05a29f4439be654097d018fc3b7cc15
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -118,10 +126,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
